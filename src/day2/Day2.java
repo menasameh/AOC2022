@@ -30,7 +30,7 @@ public class Day2 {
     }
 
     List<Game> getInput() {
-        String input = FilesUtil.getContentOf("src/day1/input");
+        String input = FilesUtil.getContentOf("src/day2/input");
         return Arrays.stream(input.split("\n"))
                 .map(list -> Arrays.stream(list.split(" "))
                         .map(this::valueOf)
