@@ -12,7 +12,7 @@ public class Day4 {
     public void smallSol() {
         List<List<Range>> list = getInput();
 
-        int ans = list.stream()
+        long ans = list.stream()
                 .filter(l -> l.get(0).fullyContains(l.get(1)) || l.get(1).fullyContains(l.get(0)))
                 .count();
 
