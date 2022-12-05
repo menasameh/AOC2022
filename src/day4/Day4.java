@@ -22,7 +22,7 @@ public class Day4 {
     public void largeSol() {
         List<List<Range>> list = getInput();
 
-        int ans = list.stream()
+        long ans = list.stream()
                 .filter(l -> l.get(0).overlaps(l.get(1)) || l.get(1).overlaps(l.get(0)))
                 .count();
 
