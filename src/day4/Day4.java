@@ -12,10 +12,9 @@ public class Day4 {
     public void smallSol() {
         List<List<Range>> list = getInput();
 
-        int ans = list.stream()
-                .map(l -> l.get(0).fullyContains(l.get(1)) || l.get(1).fullyContains(l.get(0)) ? 1 : 0)
-                .mapToInt(Integer::intValue)
-                .sum();
+        long ans = list.stream()
+                .filter(l -> l.get(0).fullyContains(l.get(1)) || l.get(1).fullyContains(l.get(0)))
+                .count();
 
         System.out.println(ans);
     }
@@ -23,10 +22,9 @@ public class Day4 {
     public void largeSol() {
         List<List<Range>> list = getInput();
 
-        int ans = list.stream()
-                .map(l -> l.get(0).overlaps(l.get(1)) || l.get(1).overlaps(l.get(0)) ? 1 : 0)
-                .mapToInt(Integer::intValue)
-                .sum();
+        long ans = list.stream()
+                .filter(l -> l.get(0).overlaps(l.get(1)) || l.get(1).overlaps(l.get(0)))
+                .count();
 
         System.out.println(ans);
     }
