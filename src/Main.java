@@ -4,9 +4,10 @@ import day12.Day12;
 import day13.Day13;
 import day14.Day14;
 import day15.Day15;
+import day16.Day16;
 
 public class Main {
     public static void main(String[] args) {
-        (new Day15()).largeSol();
+        (new Day16()).largeSol();
     }
 }
